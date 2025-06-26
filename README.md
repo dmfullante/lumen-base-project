@@ -18,8 +18,8 @@ This is a **Lumen-based** microservice project — a lightweight micro-framework
 ```bash
   user@ubuntu:~/$: git clone https://github.com/dmfullante/lumen-base-project.git
   user@ubuntu:~/: cd lumen-base-project
-  user@ubuntu:~/lumen-base-project$: composer install
   user@ubuntu:~/lumen-base-project$: cp .env.example .env
+  user@ubuntu:~/lumen-base-project$: composer install
   user@ubuntu:~/lumen-base-project$: docker-compose build
   user@ubuntu:~/lumen-base-project$: docker-compose up -d
   user@ubuntu:~/lumen-base-project$: docker exec -it lumen-base-project-lumen-1 bash
