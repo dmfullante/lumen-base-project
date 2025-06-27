@@ -40,7 +40,7 @@ class AuthService extends BaseService
             }
 
             $token = Auth::claims([
-                '2fa_verified' => false
+                '2fa_verified' => true
             ])->fromUser($user);
             return [
                 'result' => [
