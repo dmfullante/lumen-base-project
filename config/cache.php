@@ -9,6 +9,10 @@ return [
             'path' => storage_path('framework/cache/data'),
         ],
         // add other stores as needed
+        'array' => [
+            'driver' => 'array',
+            'serialize' => false,
+        ],
     ],
 
     'prefix' => env('CACHE_PREFIX', 'lumen_cache')
