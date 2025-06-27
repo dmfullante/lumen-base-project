@@ -306,14 +306,9 @@ class AuthService extends BaseService
 
             User::where('id', $user->id)->update(['otp_expires_at' => null]);
 
-            $token = Auth::claims([
-                '2fa_verified' => true
-            ])->fromUser($user);
-
             return [
                 'result' => [
-                    'user' => $user,
-                    'token' => $token,
+                    'user' => $user
                 ],
                 'message' => 'OTP validated successfully.',
                 'code' => 200,
