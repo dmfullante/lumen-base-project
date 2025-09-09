@@ -23,13 +23,6 @@ COPY . .
 # Install project dependencies
 RUN composer install
 
-# Set proper permissions for Lumen to write logs
-RUN chown -R www-data:www-data /var/www/html/storage
-RUN chmod -R 775 /var/www/html/storage
-RUN chown -R www-data:www-data storage; 
-RUN chmod -R 775 /var/www/html/storage; 
-RUN usermod -a -G www-data root
-
 # Expose port 5177 (default for Apache)
 EXPOSE 5177
 
