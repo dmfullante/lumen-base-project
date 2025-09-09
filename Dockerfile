@@ -33,4 +33,7 @@ RUN usermod -a -G www-data root
 # Expose port 5177 (default for Apache)
 EXPOSE 5177
 
-# The default CMD from `php:8.3-apache` runs Apache2 automatically
+# Start Script
+COPY ./.docker/sh/api.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+CMD ["/bin/sh", "/usr/local/bin/start.sh"]
